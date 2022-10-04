@@ -16,6 +16,9 @@ i{
     font-size: 15px;
     cursor: pointer;
 }
+.fa-solid{
+    color: #999;
+}
 
 .liked{
     color: red;
@@ -28,7 +31,7 @@ i{
 /* layout */
 
 main, header{
-    width: 290px;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -61,7 +64,7 @@ button{
     color: white;
     padding: 10px 19px;
     border-radius: 20px;
-    width: 100%; 
+    width: 50%; 
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
@@ -87,7 +90,7 @@ button{
     font-size: 13px;
     justify-content: space-between;
     width: 160px;
-    gap: 4px;
+    
 }
 
 .tweet-detail{
