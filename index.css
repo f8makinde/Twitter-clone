@@ -87,6 +87,7 @@ button{
     font-size: 13px;
     justify-content: space-between;
     width: 160px;
+    gap: 4px;
 }
 
 .tweet-detail{
