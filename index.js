@@ -1,7 +1,7 @@
 import { tweetsData } from "/data.js";
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-const tweetBtn =  document.getElementById("tweet-btn");
-const txtArea = document.getElementById("txt");
+
 
 document.addEventListener("click", function(e){
   
@@ -13,6 +13,9 @@ document.addEventListener("click", function(e){
   }
   else if(e.target.dataset.reply){
     handleReplyClick(e.target.dataset.reply)
+  }
+  else if(e.target.id === "tweet-btn"){
+    handleTweetBtnClick()
   }
 
 })
@@ -48,6 +51,25 @@ function handleRetweetClick(tweetId){
 function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle("hidden")
 
+}
+function handleTweetBtnClick(){
+    const tweetInput = document.getElementById("txt");
+     
+    if(tweetInput.value){
+tweetsData.unshift({
+    handle: `@f8_makinde`,
+    profilePic: `images/my portfolio pics.png`,
+    likes: 0,
+    retweets: 0,
+    tweetText: tweetInput.value,
+    replies: [],
+    isLiked: false,
+    isRetweeted: false,
+    uuid: uuidv4()
+  })
+  }
+  tweetInput.value = ""
+render()
 }
 
 function getFeedHtml(tweets){
