@@ -9,13 +9,14 @@ html, body {
 h1{
     color: #0F8CDF;
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 20px;
 }
 
 i{
     font-size: 15px;
     cursor: pointer;
 }
+
 .fa-solid{
     color: #999;
 }
@@ -31,7 +32,7 @@ i{
 /* layout */
 
 main, header{
-    width: 30%;
+    width: 290px;
     margin: 0 auto;
 }
 
@@ -49,13 +50,13 @@ header{
 
 textarea{
     border: none;
+    resize: none;
     padding: 10px;
     margin: 0 0 20px 0;
     height: 60px;
     width: 100%;
     font-size: 20px;
     line-height: 30px;
-    resize: none;
 }
 
 button{
@@ -64,7 +65,7 @@ button{
     color: white;
     padding: 10px 19px;
     border-radius: 20px;
-    width: 50%; 
+    width: 100%; 
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
@@ -87,10 +88,9 @@ button{
 
 .tweet-details{
     display: flex;
-    font-size: 1rem;
+    font-size: 13px;
     justify-content: space-between;
     width: 160px;
-    
 }
 
 .tweet-detail{
@@ -106,7 +106,7 @@ button{
 }
 
 .handle{
-    font-size: 1rem;
+    font-size: 12px;
     font-weight: 500;
     color: #555;
     margin-top: 0;
@@ -114,7 +114,7 @@ button{
 
 .tweet-text{
     width: 207px;
-    font-size: 1rem;
+    font-size: 14px;
     line-height: 20px;
 }
 
@@ -124,11 +124,9 @@ button{
     border: 1px solid lightgray;
     border-radius: 50%;
     width: 48px;
-    object-fit: cover;
 }
 
 /* utility */
 .hidden{
     display: none;
 }
-
