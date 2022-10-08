@@ -11,7 +11,11 @@ h1{
     margin-bottom: 10px;
     font-size: 20px;
 }
-
+.twitter-icon{
+    color: #0F8CDF;
+    font-size: 2rem;
+    margin-top: 20px;
+}
 i{
     font-size: 15px;
     cursor: pointer;
@@ -129,4 +133,11 @@ button{
 /* utility */
 .hidden{
     display: none;
+}
+.delete{
+    color: rgb(236, 53, 53);
+}
+span{
+    display: flex;
+    justify-content: space-between;
 }

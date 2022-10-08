@@ -14,11 +14,15 @@ document.addEventListener("click", function(e){
   else if(e.target.dataset.reply){
     handleReplyClick(e.target.dataset.reply)
   }
+  else if(e.target.dataset.cls){
+    handleClearClick(e.target.dataset.cls)
+  }
   else if(e.target.id === "tweet-btn"){
     handleTweetBtnClick()
   }
 
 })
+
 
 function handleLikeClick(tweetId){
     const targetTweetObj = tweetsData.filter(function(tweet){
@@ -52,6 +56,16 @@ function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle("hidden")
 
 }
+function handleClearClick(tweetId){
+    tweetsData.filter(function(tweet){
+         return tweet.uuid === tweetId;
+       })
+       tweetsData.shift()
+      
+ 
+     render();
+ }
+
 function handleTweetBtnClick(){
     const tweetInput = document.getElementById("txt");
      
@@ -107,7 +121,10 @@ function getFeedHtml(tweets){
             <div class="tweet-inner">
                 <img src="${tweet.profilePic}" class="profile-pic">
                 <div>
+                    <span>
                     <p class="handle">${tweet.handle}</p>
+                    <i class="fa-solid fa-trash-can delete" data-cls="${tweet.uuid}"></i>
+                    </span>
                     <p class="tweet-text">${tweet.tweetText}</p>
                     <div class="tweet-details">
                         <span class="tweet-detail">
@@ -137,4 +154,7 @@ function getFeedHtml(tweets){
         }
 
        render();
-
+    //   const clearEl = document.getElementById("clear-tweet")
+    //   clearEl.addEventListener("click", function(){
+    //     tweet.innerHTML = `Hello`;
+    //   })
