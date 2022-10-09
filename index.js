@@ -174,6 +174,7 @@ function getFeedHtml(tweets){
 
        render();
 
+
 const toggle = document.getElementById('toogle-dark')
 const body = document.querySelector('body');
  
@@ -185,8 +186,11 @@ toggle.addEventListener("click", function(){
     body.style.transition = "2s"
   }
   else{
+   
     body.style.background = "black";
-    body.style.color = "white"
+    body.style.color = "white";
     body.style.transition = "2s";
   }
 })
+
+  
