@@ -154,6 +154,7 @@ function getFeedHtml(tweets){
      
         function render(){
             document.getElementById("feed").innerHTML = getFeedHtml(tweetsData)
+    
         }
 
        render();

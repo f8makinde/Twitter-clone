@@ -89,6 +89,7 @@ button{
     border-top: 1px solid lightgray;
     padding: 20px 0 0 0;
     width: 100%;
+    word-wrap: break-word;
     margin: 15px 0;
 }
 
@@ -129,6 +130,7 @@ button{
     font-size: 14px;
     line-height: 20px;
 }
+
 
 
 /* images */
