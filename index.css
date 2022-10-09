@@ -67,6 +67,8 @@ textarea{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    background: none;
+    color: #888;
 }
 
 button{
@@ -128,6 +130,7 @@ button{
     line-height: 20px;
 }
 
+
 /* images */
 
 .profile-pic{
@@ -149,7 +152,7 @@ span{
     justify-content: space-between;
 }
 .sun{
-    font-size: 22px;
+    font-size: 15px;
     cursor: pointer;
     /* position: absolute;
     top: 50%;
@@ -160,4 +163,49 @@ span{
 header{
     display: flex;
     justify-content: space-between;
+}
+
+
+
+@media (max-width: 300px){
+
+    button{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    main, header{
+        width: 220px;
+        margin: 0 auto;
+    }
+    .tweet-text{
+        width: 120px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .delete{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 230px){
+    main, header{
+        width: 230px;
+        margin: 0 auto;
+    }
+
+    .profile-pic{
+        width: 35px;
+        margin-left: .5em;
+    }
+    header{
+       margin: 0 .25em;
+    }
+    .twitter-icon{
+        font-size: 1.5rem;
+    }
 }

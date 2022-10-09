@@ -66,18 +66,6 @@ function handleClearClick(tweetId){
      render();
  }
 
-//  const tweetInput = document.getElementById("txt");
-//  let txt = tweetsData.unshift({
-//   handle: `@f8_makinde`,
-//   profilePic: `images/my portfolio pics.png`,
-//   likes: 0,
-//   retweets: 0,
-//   tweetText: tweetInput.value,
-//   replies: [],
-//   isLiked: false,
-//   isRetweeted: false,
-//   uuid: uuidv4()
-// })
     
 
 function handleTweetBtnClick(){
@@ -95,11 +83,7 @@ tweetsData.unshift({
     uuid: uuidv4()
   })
   }
-  // let save = JSON.parse(localStorage.getItem("txt"))
-  // if(save){
-  //  txt = save;
-  // }
-  // localStorage.setItem("txt", JSON.stringify(txt))
+ 
   tweetInput.value = ""
 
 render()
