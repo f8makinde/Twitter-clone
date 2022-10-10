@@ -60,7 +60,7 @@ function handleClearClick(tweetId){
     tweetsData.filter(function(tweet){
          return tweet.uuid === tweetId;
        })
-       delete tweetsData
+       tweetsData.shift()
       
  
      render();
