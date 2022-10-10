@@ -57,12 +57,11 @@ function handleReplyClick(replyId){
 
 }
 function handleClearClick(tweetId){
-    tweetsData.filter(function(tweet){
+    const data1= tweetsData.filter(function(tweet){
         return tweet.uuid === tweetId;
-       })
-      let twt= tweetsData.indexOf(tweetId)
-       if (twt > -1) {
-        tweetsData.splice(index, 1)
+       })[0]
+      if(data1 > -1){
+        tweetsData.splice(data1, 1)
       }
       
  
