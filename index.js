@@ -56,12 +56,12 @@ function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle("hidden")
 
 }
-function handleClearClick(){
+function handleClearClick(tweetId){
       const clrtweet = tweetsData.filter(function(tweet){
         return tweet.uuid === tweetId;
     })[0]
       if(clrtweet.uuid){
-        clrtweet.shift()
+        delete clrtweet
       }
  
      render();
