@@ -60,9 +60,10 @@ function handleClearClick(tweetId){
       const clrtweet = tweetsData.filter(function(tweet){
         return tweet.uuid === tweetId;
     })[0]
-      if(clrtweet){
-        clrtweet.shift()
-      }
+      const index = tweetsData.indexOf(clrtweet);
+if (index > -1) { 
+  tweetsData.splice(index, 1); 
+}
  
      render();
  }
