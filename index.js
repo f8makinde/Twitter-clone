@@ -58,9 +58,12 @@ function handleReplyClick(replyId){
 }
 function handleClearClick(tweetId){
     tweetsData.filter(function(tweet){
-         return tweet.uuid === tweetId;
+        return tweet.uuid === tweetId;
        })
-       tweetsData.shift()
+      let twt= tweetsData.indexOf(tweetId)
+       if (twt > -1) {
+        array.splice(index, 1)
+      }
       
  
      render();
