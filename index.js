@@ -62,7 +62,7 @@ function handleClearClick(tweetId){
        })
       let twt= tweetsData.indexOf(tweetId)
        if (twt > -1) {
-        array.splice(index, 1)
+        tweetsData.splice(index, 1)
       }
       
  
